@@ -6,7 +6,7 @@ wordpress_sites:
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:dailysecret/svt-wp-cms.git
     branch: master
-    # subtree: site # Use this if following the roots-example-project structure
+    subtree: site # Use this if following the roots-example-project structure
     multisite:
       enabled: false
       subdomains: false
