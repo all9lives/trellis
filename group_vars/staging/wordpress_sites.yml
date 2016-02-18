@@ -1,12 +1,12 @@
 # Documentation: https://github.com/roots/trellis#wordpress-sites
 wordpress_sites:
-  example.com:
+  svt-wp-cms:
     site_hosts:
-      - staging.example.com
+      - wp-test01.testsavoteur.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:roots/bedrock.git
+    repo: git@github.com:dailysecret/svt-wp-cms.git
     branch: master
-    # subtree: site # Use this if following the roots-example-project structure
+    subtree: site # Use this if following the roots-example-project structure
     multisite:
       enabled: false
       subdomains: false
@@ -17,18 +17,18 @@ wordpress_sites:
       duration: 30s
     system_cron: true
     env:
-      wp_home: http://staging.example.com
-      wp_siteurl: http://staging.example.com/wp
+      wp_home: http://wp-test01.testsavoteur.com
+      wp_siteurl: http://wp-test01.testsavoteur.com/wp
       wp_env: staging
-      db_name: example_staging
-      db_user: example_dbuser
-      db_password: example_dbpassword
+      db_name: wp_cms_staging
+      db_user: wp_cms_dbuser
+      db_password: ^gzDWNMXjXFzEEPm8Ugj2Bdzbhk
       # Generate your keys here: https://api.wordpress.org/secret-key/1.1/salt/
-      auth_key: "generateme"
-      auth_salt: "generateme"
-      logged_in_key: "generateme"
-      logged_in_salt: "generateme"
-      nonce_key: "generateme"
-      nonce_salt: "generateme"
-      secure_auth_key: "generateme"
-      secure_auth_salt: "generateme"
+      auth_key: "c=TDkw4AU=Nn|R>Y|]hNx<sxkp[YFwmKU&)#Bpv8L/K$A4dbft604gH+@e&hI~}1"
+      auth_salt: "TeR*v/c|2!IYs~)xDrn:!pR5{|sBoqh6pT+rQ`JR/2|/fyYN+AO;vgI2r em-YC."
+      logged_in_key: "AhLl~q+T(hM40@2T?HXiSK4]WPwQ4g~Yz+lzE Ek5D,2KLHU<7H^J=<SUFVuao4s"
+      logged_in_salt: "BVS4K6u;[RF9{J(TL`};J+ANAcF+;=qii3%j#$X2C+Fwb{<vbh0G-BC+2X-m>`Uh"
+      nonce_key: "vUADN+AnJ1qr*{1=U=YNyb}*x)9#qP{zE1,I|{+>~%^bO{-ezQtS<jeo+:`!Mg6`"
+      nonce_salt: "E BD%I+v[muVEj`^QR}O7y&~[&5mYEl{:@^XVS}5WGqC8U<6ZoTp/Ckf={B.4j^x"
+      secure_auth_key: "*`d?GMDK)%|W-.B%MBV nTB,&_c*MTK#m:}Q&,k^[z=1dL<|K8![Lvb8dX_71%jS"
+      secure_auth_salt: "@)zjw|X/.J-`$8A=s@U[T34<N6k|lK39TWI<njlg<H^+~mDEukEak,..VmOZN*@N"
