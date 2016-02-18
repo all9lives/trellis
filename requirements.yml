@@ -1,11 +1,19 @@
-- src: f500.project_deploy_module
+- name: composer
+  src: geerlingguy.composer
+  version: 1.2.7
+
 - name: ntp
   src: resmo.ntp
+  version: 0.3.0
+
 - name: logrotate
   src: nickhammond.logrotate
-- name: php5-xdebug
-  src: MaximeThoonsen.php5-xdebug
+  version: fc3ea4
+
 - name: swapfile
   src: kamaln7.swapfile
+  version: 0.4
+
 - name: mailhog
   src: geerlingguy.mailhog
+  version: 1.0.5
