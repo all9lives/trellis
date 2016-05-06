@@ -1,3 +1,37 @@
+### HEAD
+* Add connection-related cli options to ping command ([#578](https://github.com/roots/trellis/pull/578))
+* Wrap my.cnf password in quotes ([#577](https://github.com/roots/trellis/pull/577))
+* Update to WP-CLI v0.23.1 ([#576](https://github.com/roots/trellis/pull/576))
+* Fix #563 - Improve remote databases ([#573](https://github.com/roots/trellis/pull/573))
+* Fix #569 - Only skip subdomains for non-www domains ([#570](https://github.com/roots/trellis/pull/570))
+* Enable Let's Encrypt to transition http sites to https ([#565](https://github.com/roots/trellis/pull/565))
+
+### 0.9.7: April 10th, 2016
+* Fix #550 - Properly skip permalink setup for MU ([#551](https://github.com/roots/trellis/pull/551))
+* Escape salts and keys to avoid templating errors ([#548](https://github.com/roots/trellis/pull/548))
+* Add plugin to pretty print Ansible msg output ([#544](https://github.com/roots/trellis/pull/544))
+* Fix #482 - Multisite is-installed deploy check ([#543](https://github.com/roots/trellis/pull/543))
+* Skip setting permalink for multisite installs ([#546](https://github.com/roots/trellis/pull/546))
+* Fix #489 - Add $realpath_root to fastcgi_cache_key ([#542](https://github.com/roots/trellis/pull/542))
+* Move modules and plugins to `lib/trellis` directory ([#538](https://github.com/roots/trellis/pull/538))
+* Automatically set `wp_home` and `wp_siteurl` variables ([#533](https://github.com/roots/trellis/pull/533))
+* Switch to Let's Encrypt X3 intermediate certificate and fix chain issues ([#534](https://github.com/roots/trellis/pull/534))
+* Supply better defaults for `db_name` and `db_user` ([#529](https://github.com/roots/trellis/pull/529))
+* Fix deploy env template to use valid ansible vars ([#530](https://github.com/roots/trellis/pull/530))
+* Simplify and improve `wordpress_sites` with better defaults ([#528](https://github.com/roots/trellis/pull/528))
+* Allow option for WinNFSD sync folder provider on Windows ([#527](https://github.com/roots/trellis/pull/527))
+* Improve Let's Encrypt challenge pre-flight tests ([#526](https://github.com/roots/trellis/pull/526))
+* `reverse_www` filter improvements (ignore subdomains) ([#525](https://github.com/roots/trellis/pull/525))
+* Fix deprecation warnings on deploy, use current stable WP-CLI ([#523](https://github.com/roots/trellis/pull/523))
+* Fix #520 - Disable MariaDB binary logging by default ([#521](https://github.com/roots/trellis/pull/521))
+* Let's Encrypt integration ([#518](https://github.com/roots/trellis/pull/518))
+* Improve Git repo format validation ([#516](https://github.com/roots/trellis/pull/516))
+* Fix #505 - Git ignore \*.retry file
+* Fix Ansible deprecations for bare variables ([#510](https://github.com/roots/trellis/pull/510))
+* Fixes #508 - update php-xdebug config file path ([#509](https://github.com/roots/trellis/pull/509))
+* Add php-mbstring extension ([#504](https://github.com/roots/trellis/pull/504))
+* Add more necessary PHP extensions ([#503](https://github.com/roots/trellis/pull/503))
+
 ### 0.9.6: February 18th, 2016
 * Update to latest ansible-role-mailhog version ([#497](https://github.com/roots/trellis/pull/497))
 * Add `reverse_www` filter to fix `www_redirect` ([#486](https://github.com/roots/trellis/pull/486))
