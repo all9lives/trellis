@@ -1,34 +1,19 @@
-# Documentation: https://github.com/roots/trellis#wordpress-sites
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
 wordpress_sites:
   example.com:
     site_hosts:
       - example.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:roots/bedrock.git
+    repo: git@github.com:example/example.com.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     branch: master
-    # subtree: site # Use this if following the roots-example-project structure
     multisite:
       enabled: false
-      subdomains: false
     ssl:
       enabled: false
+      provider: letsencrypt
     cache:
       enabled: false
-      duration: 30s
-    system_cron: true
-    env:
-      wp_home: http://example.com
-      wp_siteurl: http://example.com/wp
-      wp_env: production
-      db_name: example_prod
-      db_user: example_dbuser
-      db_password: example_dbpassword
-      # Generate your keys here: https://api.wordpress.org/secret-key/1.1/salt/
-      auth_key: "generateme"
-      auth_salt: "generateme"
-      logged_in_key: "generateme"
-      logged_in_salt: "generateme"
-      nonce_key: "generateme"
-      nonce_salt: "generateme"
-      secure_auth_key: "generateme"
-      secure_auth_salt: "generateme"

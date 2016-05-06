@@ -1,28 +1,17 @@
-# Documentation: https://github.com/roots/trellis#wordpress-sites
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
 wordpress_sites:
-  svt-wp-cms:
+  example.com:
     site_hosts:
-      - ds-test.dev
+      - example.dev
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:roots/bedrock.git
-    site_install: true
-    site_title: Daily Secret Test
-    admin_user: admin
-    admin_password: password
-    admin_email: jeremy@all9lives.com
+    admin_email: admin@example.dev
     multisite:
       enabled: false
-      subdomains: false
     ssl:
       enabled: false
+      provider: self-signed
     cache:
       enabled: false
-      duration: 30s
-    system_cron: true
-    env:
-      wp_home: http://ds-test.dev
-      wp_siteurl: http://ds-test.dev/wp
-      wp_env: development
-      db_name: example_dev
-      db_user: example_dbuser
-      db_password: example_dbpassword
